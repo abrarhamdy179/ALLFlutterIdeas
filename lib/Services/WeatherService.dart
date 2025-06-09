@@ -24,4 +24,3 @@ class WeatherService
     }
   }
 }
-//http://api.weatherapi.com/v1/current.json?key=9c5233b5f7774f30b03144924250704&q=$city&aqi=yes

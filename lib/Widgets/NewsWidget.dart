@@ -17,7 +17,7 @@ class NewsWidget extends StatelessWidget {
           Container(
             width: 160,
               height: 160,
-              child: Image.network(urlToImage)
+              child: Image.network(urlToImage,errorBuilder: (context, error, stackTrace) => Icon(Icons.error),)
           )
               : Text("Image Not found"),
           title.isNotEmpty ? Padding(

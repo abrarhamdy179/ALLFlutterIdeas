@@ -14,9 +14,9 @@ class GenderScreen extends StatelessWidget {
       appBar: AppBar(),
       body: Consumer<RandomUserProvider>(builder: (context, value, child)
       {
-        value.GetGenderProvider(gender: gender);
         if(value.randomUserModel == null)
           {
+            value.GetGenderProvider(gender: gender);
             return Center(child: CircularProgressIndicator());
           }
         else

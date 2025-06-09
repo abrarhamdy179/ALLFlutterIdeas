@@ -10,6 +10,7 @@ class RandomUserScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var obj = Provider.of<RandomUserProvider>(context,listen: false);
     return Scaffold(
       appBar: AppBar(title: Center(child: Text("Welcome To Random User App")),),
       body: Consumer<RandomUserProvider>(builder: (context, value, child)
@@ -65,15 +66,18 @@ class RandomUserScreen extends StatelessWidget {
                       height: 50,
                       child: ElevatedButton(
                           onPressed: (){
+                            obj.randomUserModel = null ;
                             Navigator.push(context, MaterialPageRoute(builder: (context) => GenderScreen(gender: "female",),));
                           },
                           child: Icon(Icons.female,color: Colors.pinkAccent,size: 35,)),
                     ),
+
                     Container(
                       width: 100,
                       height: 50,
                       child: ElevatedButton(
                           onPressed: (){
+                            obj.randomUserModel = null ;
                             Navigator.push(context, MaterialPageRoute(builder: (context) => GenderScreen(gender: "male",),));
                           },
                           child: Icon(Icons.male,color: Colors.lightBlueAccent,size: 35,)),

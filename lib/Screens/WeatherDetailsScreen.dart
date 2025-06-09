@@ -34,6 +34,7 @@ class WeatherDetailsScreen extends StatelessWidget {
                     Text(value.weatherModel!.region),
                     Text(value.weatherModel!.localtime),
                     Text(value.weatherModel!.tz_id),
+                    Text(value.weatherModel!.temp_c.toString()+" C"),
                   ],
                 ),
               ),
