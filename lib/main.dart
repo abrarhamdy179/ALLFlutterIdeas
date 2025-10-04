@@ -5,6 +5,7 @@ import 'Providers/RandomUserProvider.dart';
 import 'Providers/RegistrationProvider.dart';
 import 'Providers/ShoppingAppProvider.dart';
 import 'Providers/WeatherProvider.dart';
+import 'Screens/HomeScreen.dart';
 import 'Screens/LoginScreen.dart';
 
 void main() {
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
-        home: LoginScreen(),
+        home: HomeScreen(),
       ),
     );
   }
